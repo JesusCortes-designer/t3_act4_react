@@ -1,0 +1,58 @@
+.titulo {
+  text-align: center;
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid orange;
+  border-radius: 6px;
+}
+
+.btn-agregar {
+  background-color: orange;
+  font-size: 1.1rem;
+}
+
+.note-list {
+  list-style: none;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+
+.note-item.completada span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-completar {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: #fff;
+}
