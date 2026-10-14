@@ -3,7 +3,7 @@ import './App.css'
 import TodoApp from './components/TodoApp'
 
 const notas = [
-  { id: 1, text: 'Aprender React', completed: true },
+  { id: 1, text: 'Aprender React', completed: false },
   { id: 2, text: 'Hacer la tarea de Classroom', completed: false },
   { id: 3, text: 'Desplegar en GitHub Pages', completed: false },
 ]
