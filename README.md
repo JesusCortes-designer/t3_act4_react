@@ -1,16 +1,46 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Instituto Tecnológico de Oaxaca
 
-Currently, two official plugins are available:
+**Materia:** Programación Web
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Alumno:** Jesús Cortés Cruz
 
-## React Compiler
+**Docente:** Martínez Nieto Adelina
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Actividad 4:** Introducción a React - Fundamentos y Primer Componente
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# Lista de Tareas - React
+
+Mini aplicación hecha con **React + Vite** para la Actividad 4 de Programación Web.
+Permite agregar tareas, marcarlas como completadas y eliminarlas.
+
+## Qué incluye
+- **Componente simple:** `App`.
+- **Componente con props:** `TodoApp` recibe `titulo` y `notasIniciales`.
+- **Componente con estado:** `TodoApp` usa `useState` para las notas y el texto del input.
+- **Lista dinámica:** las tareas se muestran con `.map()` usando `key`.
+
+## Cómo ejecutarlo
+    npm install
+    npm run dev
+
+## Preguntas
+
+### a) ¿Qué diferencia hay entre props y state en React?
+Las props son datos que un componente padre le envía a un componente hijo. El hijo solo las lee y no puede modificarlas. El state es información propia del componente que puede cambiar con el tiempo, y cuando cambia React vuelve a renderizar el componente. En mi app, `titulo` y `notasIniciales` son props, y la lista de `notas` es state.
+
+### b) ¿Por qué es importante usar una key al renderizar una lista de elementos?
+La key le permite a React identificar cada elemento de la lista de forma única. Gracias a eso, cuando se agrega, elimina o cambia un elemento, React actualiza solo lo necesario en lugar de volver a dibujar toda la lista, y evita errores visuales. En mi app uso `key={nota.id}`.
+
+### c) ¿Qué hace useState y dónde lo usé?
+`useState` es un hook que permite guardar un valor dentro de un componente y modificarlo. Devuelve el valor actual y una función para actualizarlo. Al usar esa función, React vuelve a renderizar el componente con el nuevo valor. En mi app lo usé en `const [notas, setNotas] = useState(notasIniciales)` para guardar las tareas, y en `const [texto, setTexto] = useState('')` para guardar lo que escribe el usuario en el input.
+
+### d) Repositorio de GitHub
+https://github.com/JesusCortes-designer/t3_act4_react
+### e) Proyecto desplegado
+https://jesuscortes-designer.github.io/t3_act4_react/
