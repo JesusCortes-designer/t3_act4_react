@@ -4,7 +4,7 @@ function TodoApp({ titulo, notasIniciales }) {
     console.log('Prop titulo:', titulo)
   console.log('Prop notasIniciales:', notasIniciales)
 
-  const [notas, setNotas] = useState(notasIniciales)
+  const [notas, setNotas] = useState(notasIniciales) //hooks
   const [texto, setTexto] = useState('')
 
   const agregarNota = (e) => {
